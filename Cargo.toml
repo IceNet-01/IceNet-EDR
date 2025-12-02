@@ -9,8 +9,8 @@ resolver = "2"
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-authors = ["IceNet EDR Team"]
-license = "MIT OR Apache-2.0"
+authors = ["Northern Plains IT, LLC and OnyxVZ, LLC"]
+license = "SEE LICENSE IN LICENSE"
 rust-version = "1.75"
 
 [workspace.dependencies]

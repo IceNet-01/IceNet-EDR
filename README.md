@@ -338,7 +338,15 @@ response:
 
 ## License
 
-[To be determined]
+IceNet EDR is dual-licensed:
+
+- **Non-Commercial License** (free): For personal, educational, research, and non-profit use
+- **Commercial License** (requires agreement): For commercial products, services, and for-profit operations
+
+Copyright (c) 2025 Northern Plains IT, LLC and OnyxVZ, LLC
+
+See the [LICENSE](LICENSE) file for complete terms and conditions.
+See the [NOTICE](NOTICE) file for third-party software attributions.
 
 ## Contributing
 

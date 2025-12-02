@@ -1,0 +1,231 @@
+ICENET EDR - THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+================================================================================
+
+This file contains notices and information for third-party software included
+with or used by IceNet EDR.
+
+Copyright (c) 2025 Northern Plains IT, LLC and OnyxVZ, LLC
+
+================================================================================
+OVERVIEW
+================================================================================
+
+IceNet EDR uses various open-source libraries and components. This document
+provides attribution and license information for those components as required
+by their respective licenses.
+
+================================================================================
+RUST DEPENDENCIES (Agent)
+================================================================================
+
+The following Rust crates are used by the IceNet EDR agent:
+
+1. tokio (MIT)
+   - Asynchronous runtime for Rust
+   - Copyright (c) 2024 Tokio Contributors
+   - License: MIT
+   - https://github.com/tokio-rs/tokio
+
+2. serde (MIT OR Apache-2.0)
+   - Serialization/deserialization framework
+   - Copyright (c) 2014 Erick Tryzelaar and David Tolnay
+   - License: MIT OR Apache-2.0
+   - https://github.com/serde-rs/serde
+
+3. reqwest (MIT OR Apache-2.0)
+   - HTTP client library
+   - Copyright (c) 2016 Sean McArthur
+   - License: MIT OR Apache-2.0
+   - https://github.com/seanmonstar/reqwest
+
+4. notify (CC0-1.0)
+   - Cross-platform filesystem notification library
+   - License: CC0-1.0
+   - https://github.com/notify-rs/notify
+
+5. sysinfo (MIT)
+   - System information library
+   - Copyright (c) 2015 Guillaume Gomez
+   - License: MIT
+   - https://github.com/GuillaumeGomez/sysinfo
+
+6. sha2 (MIT OR Apache-2.0)
+   - SHA-2 hash functions
+   - License: MIT OR Apache-2.0
+   - https://github.com/RustCrypto/hashes
+
+7. uuid (MIT OR Apache-2.0)
+   - UUID generation and parsing
+   - License: MIT OR Apache-2.0
+   - https://github.com/uuid-rs/uuid
+
+8. tracing (MIT)
+   - Application-level tracing framework
+   - Copyright (c) 2019 Tokio Contributors
+   - License: MIT
+   - https://github.com/tokio-rs/tracing
+
+9. anyhow (MIT OR Apache-2.0)
+   - Error handling library
+   - Copyright (c) 2019 David Tolnay
+   - License: MIT OR Apache-2.0
+   - https://github.com/dtolnay/anyhow
+
+10. chrono (MIT OR Apache-2.0)
+    - Date and time library
+    - License: MIT OR Apache-2.0
+    - https://github.com/chronotope/chrono
+
+For Windows builds:
+11. windows (MIT OR Apache-2.0)
+    - Rust for Windows
+    - Copyright (c) Microsoft Corporation
+    - License: MIT OR Apache-2.0
+    - https://github.com/microsoft/windows-rs
+
+12. winapi (MIT OR Apache-2.0)
+    - Windows API bindings
+    - License: MIT OR Apache-2.0
+    - https://github.com/retep998/winapi-rs
+
+For Linux builds:
+13. nix (MIT)
+    - Rust-friendly Unix API bindings
+    - License: MIT
+    - https://github.com/nix-rust/nix
+
+14. inotify (ISC)
+    - Linux inotify bindings
+    - License: ISC
+    - https://github.com/hannobraun/inotify-rs
+
+For macOS builds:
+15. core-foundation (MIT OR Apache-2.0)
+    - Rust bindings to Core Foundation
+    - License: MIT OR Apache-2.0
+    - https://github.com/servo/core-foundation-rs
+
+================================================================================
+GO DEPENDENCIES (Server)
+================================================================================
+
+The following Go modules are used by the IceNet EDR server:
+
+1. Gin Web Framework (MIT)
+   - Copyright (c) 2014 Manuel Martínez-Almeida
+   - License: MIT
+   - https://github.com/gin-gonic/gin
+
+2. GORM (MIT)
+   - Copyright (c) 2013-NOW Jinzhu
+   - License: MIT
+   - https://github.com/go-gorm/gorm
+
+3. PostgreSQL Driver (MIT)
+   - Copyright (c) Jack Christensen
+   - License: MIT
+   - https://github.com/lib/pq
+
+4. NATS Go Client (Apache-2.0)
+   - Copyright 2012-2024 The NATS Authors
+   - License: Apache-2.0
+   - https://github.com/nats-io/nats.go
+
+5. Redis Go Client (BSD-2-Clause)
+   - Copyright (c) 2013 The github.com/go-redis/redis Authors
+   - License: BSD-2-Clause
+   - https://github.com/redis/go-redis
+
+6. logrus (MIT)
+   - Copyright (c) 2014 Simon Eskildsen
+   - License: MIT
+   - https://github.com/sirupsen/logrus
+
+7. UUID (BSD-3-Clause)
+   - Copyright (c) 2009,2014 Google Inc. All rights reserved.
+   - License: BSD-3-Clause
+   - https://github.com/google/uuid
+
+8. WebSocket (BSD-2-Clause)
+   - Copyright (c) 2013 The Gorilla WebSocket Authors
+   - License: BSD-2-Clause
+   - https://github.com/gorilla/websocket
+
+================================================================================
+DATABASE AND INFRASTRUCTURE
+================================================================================
+
+1. PostgreSQL (PostgreSQL License)
+   - Copyright (c) 1996-2024, The PostgreSQL Global Development Group
+   - License: PostgreSQL License (similar to MIT/BSD)
+   - https://www.postgresql.org/
+
+2. Redis (BSD-3-Clause)
+   - Copyright (c) 2006-2024, Redis Ltd.
+   - License: BSD-3-Clause
+   - https://redis.io/
+
+3. NATS Server (Apache-2.0)
+   - Copyright 2012-2024 The NATS Authors
+   - License: Apache-2.0
+   - https://nats.io/
+
+================================================================================
+WEB DASHBOARD DEPENDENCIES (To Be Implemented)
+================================================================================
+
+The following will be used for the web dashboard:
+
+1. React (MIT)
+   - Copyright (c) Meta Platforms, Inc. and affiliates
+   - License: MIT
+   - https://react.dev/
+
+2. Material-UI or Ant Design (MIT)
+   - License: MIT
+   - Various component libraries
+
+3. Chart.js or Recharts (MIT)
+   - License: MIT
+   - Charting libraries
+
+Note: Complete list will be provided when dashboard is implemented.
+
+================================================================================
+DEVELOPMENT TOOLS
+================================================================================
+
+1. Docker (Apache-2.0)
+   - Copyright 2013-2024 Docker, Inc.
+   - License: Apache-2.0
+   - https://www.docker.com/
+
+2. Alpine Linux (MIT and others)
+   - Various licenses for base system
+   - https://alpinelinux.org/
+
+================================================================================
+LICENSE TEXTS
+================================================================================
+
+Complete license texts for the above software can be found at:
+- MIT License: https://opensource.org/licenses/MIT
+- Apache-2.0: https://opensource.org/licenses/Apache-2.0
+- BSD-2-Clause: https://opensource.org/licenses/BSD-2-Clause
+- BSD-3-Clause: https://opensource.org/licenses/BSD-3-Clause
+- ISC License: https://opensource.org/licenses/ISC
+- PostgreSQL License: https://opensource.org/licenses/PostgreSQL
+
+================================================================================
+NOTES
+================================================================================
+
+This NOTICE file is provided in accordance with the licensing requirements of
+the third-party software used in IceNet EDR. All trademarks and copyrights
+belong to their respective owners.
+
+If you believe any attribution is missing or incorrect, please contact:
+  Northern Plains IT, LLC and OnyxVZ, LLC
+  [Contact information to be provided]
+
+Last Updated: 2025-12-02
