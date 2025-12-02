@@ -1,0 +1,75 @@
+# IceNet EDR Agent Configuration Example
+
+agent:
+  # Unique agent ID (will be auto-generated if not specified)
+  # agent_id: "00000000-0000-0000-0000-000000000000"
+
+  # Server URL
+  server_url: "https://edr-server.example.com:8443"
+
+  # Update interval in seconds
+  update_interval_secs: 300
+
+  monitoring:
+    file_system: true
+    processes: true
+    network: true
+    registry: true  # Windows only
+    memory: true
+
+    # Paths to exclude from monitoring
+    excluded_paths:
+      - "/proc"
+      - "/sys"
+      - "/dev"
+      - "C:\\Windows\\WinSxS"
+
+    # Processes to exclude from monitoring
+    excluded_processes:
+      - "icenet-agent"
+
+  detection:
+    real_time_scan: true
+    behavioral_analysis: true
+    ml_detection: true
+    yara_rules: true
+    signature_db: true
+
+  response:
+    # Automatically quarantine detected threats
+    auto_quarantine: true
+
+    # Allow automatic process termination
+    allow_process_termination: true
+
+    # Allow automatic network blocking
+    allow_network_blocking: true
+
+    # Require admin approval for actions
+    require_admin_approval: false
+
+  performance:
+    # Maximum CPU usage percentage
+    max_cpu_percent: 10
+
+    # Maximum memory usage in MB
+    max_memory_mb: 256
+
+    # Event buffer size
+    event_buffer_size: 10000
+
+    # Scan queue size
+    scan_queue_size: 100
+
+logging:
+  level: "info"  # trace, debug, info, warn, error
+  file: "/var/log/icenet-agent.log"
+  max_size_mb: 100
+  max_backups: 5
+
+tls:
+  enabled: true
+  ca_cert: "/etc/icenet/ca.crt"
+  # client_cert: "/etc/icenet/client.crt"
+  # client_key: "/etc/icenet/client.key"
+  verify_server: true

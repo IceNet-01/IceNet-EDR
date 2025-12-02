@@ -1,0 +1,72 @@
+[workspace]
+members = [
+    "agent",
+    "shared/protocol",
+    "shared/models",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["IceNet EDR Team"]
+license = "MIT OR Apache-2.0"
+rust-version = "1.75"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+tokio-util = "0.7"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"
+
+# Networking
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+rustls = "0.22"
+rustls-pemfile = "2.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# System interaction
+libc = "0.2"
+
+# Windows-specific
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.52", features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Memory",
+    "Win32_System_IO",
+    "Win32_System_Registry",
+    "Win32_Storage_FileSystem",
+    "Win32_Security",
+    "Win32_NetworkManagement_IpHelper",
+    "Win32_Networking_WinSock",
+] }
+winapi = { version = "0.3", features = ["winnt", "processthreadsapi", "handleapi"] }
+
+# macOS-specific
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation = "0.9"
+mach2 = "0.4"
+
+# Linux-specific
+[target.'cfg(target_os = "linux")'.dependencies]
+nix = { version = "0.27", features = ["process", "signal", "fs"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
